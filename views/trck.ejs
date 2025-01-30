@@ -1,0 +1,50 @@
+<!-- layout declaration -->
+<% layout("/layouts/boilerplate1.ejs") %>
+
+  <!-- unordered lists declaration -->
+  <ul>
+    <!-- loop for email declaration -->
+    <% for(mails of emails.Email){ %>
+      <li>
+        <a method="POST" href="/display/<%= mails._id %>">
+          <div class="row">
+            <!-- To  email declaration -->
+            <div class="col-4">
+              To: <%= mails.Toemail %>
+            </div>
+
+            <!-- Subject declaration -->
+            <div class="col">
+              <%= mails.Subject %>
+            </div>
+            <!-- Delete Icon Declaration -->
+            <div class="col">
+              <form method="POST" action="/display/<%= mails._id %>?_method=DELETE">
+                <button class="btn btns"><i class="fa-solid fa-trash-can"></i></button>
+              </form>
+            </div>
+            <!-- Attachment Icon Declaration -->
+            <div class="col">
+              <i class="fa-solid fa-paperclip"></i>
+            </div>
+          </div>
+        </a>
+      </li>
+      <hr />
+      <% } %>
+  </ul>
+  <!-- style declaration -->
+  <style>
+    .text {
+      padding: 0.4rem !important;
+      scroll-behavior: auto;
+    }
+
+    ul a {
+      color: black !important;
+    }
+
+    .btns {
+      padding: 0 !important;
+    }
+  </style>

@@ -1,0 +1,106 @@
+<!-- SideBar options  -->
+<section class="sidebar">
+
+  <!-- Header Sections -->
+  <h2><b> <i class="fa-solid fa-envelopes-bulk"></i></b> Email Builder Pro</h2>
+  <br />
+
+  <!-- Compose Forms Badge -->
+  <form action="/sent/<%= currUser._id %>">
+    <button class=" badge text-bg-light compose" style="border: none;">Compose</button>
+  </form>
+
+  <!-- Features Lists  -->
+  <ul>
+    <!-- Mails Section -->
+    <a href="/mail">
+      <li><i class="fa-solid fa-inbox"></i> &nbsp; &nbsp; &nbsp; Inbox</li>
+    </a>
+
+    <!-- Sent Section-->
+    <a href="/track/<%= currUser._id %>">
+      <li><i class="fa-regular fa-paper-plane"></i> &nbsp; &nbsp; &nbsp; Sent</li>
+    </a>
+    <!-- Starred Section -->
+    <a href="#">
+      <li><i class="fa-regular fa-star"></i> &nbsp; &nbsp; &nbsp;Starred</li>
+    </a>
+    <!-- Draft Section -->
+    <a href="#">
+      <li><i class="fa-regular fa-file-zipper"></i> &nbsp; &nbsp; &nbsp; Draft</li>
+    </a>
+    <!-- More Section -->
+    <a href="#">
+      <li><i class="fa-solid fa-angle-down"></i> &nbsp; &nbsp; &nbsp;More</li>
+    </a>
+  </ul>
+
+  <!-- Labels -->
+  <h5>Labels<i class="fa-solid fa-plus"></i></h5>
+
+  <!-- Sent / Unsent declarations -->
+  <ul>
+    <li>
+      <a href="/track/<%= currUser._id %>">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> &nbsp; &nbsp;Sent/unsent
+    </li>
+    </a>
+  </ul>
+</section>
+
+<!-- style declaration -->
+<style>
+  .container {
+    margin: 0 !important;
+  }
+
+  .sidebar {
+    height: 88vh !important;
+    width: 40vw !important;
+    border-right: 2px solid #b8bfbf;
+    padding: 1rem;
+  }
+
+  ul li {
+    margin: 0.41rem;
+    font-size: 1rem !important;
+  }
+
+  ul {
+    border-radius: 5px;
+    margin-top: 2rem;
+  }
+
+  ul a {
+    text-decoration: none !important;
+    color: #8b929e;
+  }
+
+  ul a:hover {
+    color: black;
+  }
+
+  .sidebar {
+    cursor: pointer;
+  }
+
+  .compose {
+    padding: 1.3rem !important;
+    font-size: 1.4rem !important;
+    padding-left: 1rem !important;
+    background-color: #dfe7e7 !important;
+    box-shadow: 2px 3px rgb(126, 120, 120) !important;
+    opacity: 0.7 !important;
+  }
+
+  .compose:hover {
+    border-radius: 1.5rem !important;
+    box-sizing: none !important;
+    opacity: 1 !important;
+  }
+
+  h5 {
+    display: flex !important;
+    justify-content: space-between;
+  }
+</style>

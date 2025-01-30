@@ -1,0 +1,40 @@
+<!-- layout Declaration -->
+<% layout("/layouts/boilerplate.ejs") %>
+
+  <!-- Container Code -->
+  <div class="container">
+
+    <!-- Head Declaration -->
+    <h1 style="margin-top: 1rem;">Login</h1>
+    <hr />
+
+    <!-- Form Declaration -->
+    <form method="POST" action="/login">
+
+      <!-- Username Field -->
+      <div class="col-5 col-lg-expand">
+        <label for="username" class="form-labeL">Username : </label>
+        <input type="text" name="username" placeholder="ayushghole" id="username" class=" form-control"
+          style="margin-top: 0.5rem;" required />
+      </div>
+
+      <!-- Password Field -->
+      <div class="col-5" style="margin-top: 0.4rem;">
+        <label for="password" class="form-labeL">Password : </label>
+        <input type="password" name="password" placeholder="asf@eff" id="password" class=" form-control"
+          style="margin-top: 0.5rem;" required />
+      </div>
+
+      <!--Validation Declaration -->
+      <div class="col-5" style="margin-top: 2rem;">
+        <input class="form-check-input" type="checkbox" id="gridCheck1" required>
+        <label class="form-check-label" for="gridCheck1">
+          I am not robot
+        </label>
+      </div>
+
+      <!-- Login Button Declaration -->
+      <button class="btn btn-dark" style="margin-top: 1rem;">Login</button>
+  </div>
+  </form>
+  </div>

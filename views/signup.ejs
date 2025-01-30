@@ -1,0 +1,68 @@
+<!-- layout declaration -->
+<% layout("/layouts/boilerplate.ejs") %>
+
+  <!-- Container Declaration -->
+  <div class="container">
+    <!-- Heading Declaration -->
+    <h1 style="margin-top: 1rem;">SignUp to Email Builder Pro</h1>
+    <hr />
+
+    <!-- form declaration -->
+    <form method="post" action="/signup">
+      <!-- Username Field -->
+      <div class="col-5 col-lg-expand">
+        <label for="username" class="form-labeL">Create Username : </label>
+        <input type="text" name="username" placeholder="enter username " id="username" class=" form-control"
+          style="margin-top: 0.5rem;" required />
+      </div>
+
+      <!-- Email Field -->
+      <div class="col-5 col-lg-expand">
+        <label for="email" class="form-labeL">Email : </label>
+        <input type="email" name="email" placeholder="enter email " id="email" class=" form-control"
+          style="margin-top: 0.5rem;" required />
+      </div>
+
+      <!-- Password Field -->
+      <div class="col-5" style="margin-top: 0.4rem;">
+        <label for="password" class="form-labeL">Create Password : </label>
+        <input type="password" name="password" placeholder="enter password" id="password" class=" form-control"
+          style="margin-top: 0.5rem;" required />
+      </div>
+
+      <!-- City Field -->
+      <div class="row g-3" style="margin-top: 0.5rem;">
+        <div class="col-3">
+          <label for="city" class="form-labeL">City :</label>
+          <input type="text" class="form-control" name="city" id="city" placeholder="City" aria-label="City"
+            class="form-control" style="margin-top: 0.5rem;" />
+        </div>
+
+        <!-- State Field -->
+        <div class="col-3 ">
+          <label for="state" class="form-labeL">State :</label>
+          <input type="text" name="state" class="form-control" placeholder="State" id="state" aria-label="State"
+            class="form-control" style="margin-top: 0.5rem;">
+        </div>
+
+        <!-- Zip Field  -->
+        <div class="col-3">
+          <label for="zip" class="form-labeL">Zip :</label>
+          <input type="number" name="zip" class="form-control" placeholder="Zip" class="form-control" aria-label=" Zip"
+            style="margin-top: 0.5rem;">
+        </div>
+      </div>
+
+      <!-- Checkbox Declaration -->
+      <div class="col-5" style="margin-top: 2rem;">
+        <input class="form-check-input" type="checkbox" id="gridCheck1" required>
+        <label class="form-check-label" for="gridCheck1">
+          I am not robot
+        </label>
+      </div>
+
+      <!-- Login Button -->
+      <button class="btn btn-dark" style="margin-top: 1rem;">Login</button>
+  </div>
+  </form>
+  </div>

@@ -1,0 +1,33 @@
+<!-- Layout Declaration -->
+<% layout("/layouts/boilerplate1.ejs") %>
+
+  <!-- Code  -->
+  <div class="conatiner">
+    <p><b>To : <%= mailId.Toemail %>
+      </b>
+    </p>
+    <hr />
+
+    <p><b>Subject : <%= mailId.Subject %></b>
+    </p>
+    <hr />
+    <p>
+      <small>Description : </small> <br>
+      <%= mailId.body %>
+    </p>
+    <span><a href="/track/<%= currUser._id %>"><small>Back &nbsp;<i class="fa-solid fa-arrow-rotate-left"></i> &nbsp;
+        </small> </a></span>
+    <span><a href=""><i class="fa-solid fa-trash-can"></i></a></span>
+  </div>
+
+  <!-- Styling  -->
+  <style>
+    .container {
+      padding: 1.5rem !important;
+    }
+
+    a {
+      text-decoration: none !important;
+      color: grey;
+    }
+  </style>

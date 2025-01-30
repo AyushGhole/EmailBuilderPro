@@ -1,0 +1,24 @@
+<!-- Nav declaration  -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="margin-left: 2rem;" href="/"><i class="fa-solid fa-envelopes-bulk"></i></a>
+
+    <!-- Iniatilizing the search bar if user is not logged in  -->
+    <% if(!currUser) { %>
+      <form class="d-flex" role="search">
+        <!--  Search input declaration -->
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+
+        <!-- Search  Field declaration-->
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <% } %>
+
+        <!-- Iniatializing the logout button if  user is logged in -->
+        <% if( currUser) { %>
+          <form method="GET" action="/logout">
+            <button class="btn btn-outline-primary">LogOut</button>
+          </form>
+          <% } %>
+  </div>
+</nav>

@@ -1,0 +1,46 @@
+<!-- Layout Declaration -->
+<% layout("/layouts/boilerplate.ejs") %>
+
+  <!-- Styling -->
+  <style>
+    /*
+ * Base structure
+ */
+    body {
+      text-shadow: 0 .05rem .1rem rgba(194, 165, 165, 0.5);
+      box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    }
+
+    .cover-container {
+      max-width: 42em;
+    }
+  </style>
+
+  <!-- Container Declaration -->
+  <div class="cover-container d-flex w-100 p-3 mx-auto flex-column" style="height: 100vh; text-align: center;">
+    <main class="px-3" style="padding: 3rem;">
+      <!-- Head Tag Declaration -->
+      <h1>Email Buider Pro</h1>
+
+      <!-- Paragraph Declaration -->
+      <p class="lead">Design, automate, and optimize professional emails effortlessly. With Email Builder Pro’s
+        intuitive drag-and-drop editor, responsive templates, and powerful analytics, you can craft emails that engage,
+        convert, and deliver results—all without needing any coding skills. Start building emails that stand out today!
+      </p>
+
+      <!-- Iniatializing the buttons if user not logged in  -->
+      <% if(!currUser) { %>
+        <p class="lead">
+          <a href="/login" class="btn btn-lg btn-secondary">Login</a>
+          <a href="/signup" class="btn btn-lg btn-secondary">SignUp</a>
+        </p>
+        <% } %>
+
+          <!-- Iniatializing the buttons if user is logged in -->
+          <% if( currUser) { %>
+            <p class="head">
+              <a href="/sent/<%= currUser._id %>" class="btn btn-lg btn-secondary">Create Emails</a>
+            </p>
+            <% } %>
+    </main>
+  </div>

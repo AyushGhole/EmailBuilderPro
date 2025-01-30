@@ -1,0 +1,52 @@
+<!-- layout Declaration -->
+<% layout("/layouts/boilerplate1.ejs") %>
+
+
+  <!-- form declaration -->
+  <form method="post" action="/sent/<%= currUser.id %>/mails
+    ">
+    <!-- From fields  -->
+    <div class="input-group">
+      <span class="input-group-text">From </span>
+      <input type="email" name="Fromemail" class="form-control" value="<%= currUser.email %>" disabled />
+    </div>
+
+    <!-- To fields -->
+    <div class="input-group">
+      <span class="input-group-text">To </span>
+      <input type="email" name="Toemail" class="form-control" />
+    </div>
+
+    <!-- Subject Fields  -->
+    <div class="input-group">
+      <label for="Subject" class="input-group-text">Subject</label>
+      <input type="text" name="Subject" class="form-control" id="Subject" />
+    </div>
+    <hr />
+    <!-- TextArea Fields -->
+    <div class="form-floating">
+      <textarea class="form-control" name="body" style="height: 220px;"></textarea>
+    </div>
+
+    <!-- Sending Button Declarations -->
+    <button class="btn rounded-pill text-bg-primary"
+      style="padding: 0.21rem 1.3rem; margin: 1rem 0 1rem 0 ;">Send</button>
+  </form>
+
+  <!-- style declaration -->
+  <style>
+    .email {
+      border-radius: 5px;
+      width: 80% !important;
+      padding-left: 1rem;
+      font-size: 1rem;
+    }
+
+    .input-group {
+      margin: 0.51rem !important;
+    }
+
+    .input-group input {
+      width: 70% !important;
+    }
+  </style>
